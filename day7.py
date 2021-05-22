@@ -1,0 +1,8 @@
+if __name__ == '__main__':
+    n = int(input().strip())
+
+    arr = list(map(int, input().rstrip().split()))
+    for i in range(n//2):
+        arr[i], arr[-1 * (i + 1)] = arr[-1 * (i + 1)], arr[i]
+
+    print(*arr)
